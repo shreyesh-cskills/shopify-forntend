@@ -1,0 +1,334 @@
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+.warranty-form,
+.warranty-list {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.warranty-form h1 {
+  margin: 0 0 16px;
+  font-size: 1.5rem;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 24px;
+}
+
+legend {
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.field.full {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 560px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+label,
+.label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 9px 11px;
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+input[type='file'] {
+  padding: 7px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: -1px;
+  border-color: var(--accent);
+}
+
+[aria-invalid='true'] {
+  border-color: var(--error);
+}
+
+.field-error {
+  color: var(--error);
+  font-size: 0.8rem;
+  margin: 4px 0 0;
+}
+
+.hint {
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin: 4px 0 0;
+}
+
+.expiry {
+  margin: 0;
+  padding: 9px 11px;
+  border: 1px dashed var(--border);
+  border-radius: 6px;
+  color: var(--muted);
+}
+
+.alert-success {
+  background: var(--success-bg);
+  color: var(--success-text);
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+button {
+  font: inherit;
+  font-weight: 500;
+  padding: 9px 18px;
+  border-radius: 6px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--accent-hover);
+}
+
+button.secondary {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border);
+}
+
+button.secondary:hover {
+  background: var(--bg);
+}
+
+.warranty-list {
+  margin-top: 24px;
+}
+
+.warranty-list h2 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+th {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+td small {
+  color: var(--muted);
+}
+
+/* ---------- Layout / nav ---------- */
+.container {
+  max-width: 960px;
+}
+
+.topbar {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-weight: 700;
+  margin-right: 16px;
+}
+
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: var(--text);
+  background: var(--bg);
+}
+
+.nav a.active {
+  color: var(--accent);
+  background: var(--bg);
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.card h1 {
+  margin: 0 0 16px;
+  font-size: 1.5rem;
+}
+
+.card.list {
+  margin-top: 24px;
+}
+
+.card.list h2 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+}
+
+.alert-error {
+  background: var(--error-bg);
+  color: var(--error);
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+/* ---------- Buttons ---------- */
+button.small {
+  padding: 4px 10px;
+  font-size: 0.8rem;
+}
+
+button.danger {
+  background: transparent;
+  color: var(--error);
+  border-color: var(--error);
+}
+
+button.danger:hover {
+  background: var(--error-bg);
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* ---------- Tables ---------- */
+th.num,
+td.num {
+  text-align: right;
+  white-space: nowrap;
+}
+
+td.row-actions {
+  white-space: nowrap;
+  text-align: right;
+}
+
+td.row-actions button + button {
+  margin-left: 6px;
+}
+
+/* ---------- Order lines ---------- */
+.line {
+  display: grid;
+  grid-template-columns: 1fr 80px 100px auto;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.line-total {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.line-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+@media (max-width: 560px) {
+  .line {
+    grid-template-columns: 1fr 64px auto;
+  }
+  .line select {
+    grid-column: 1 / -1;
+  }
+}
+
+select.status {
+  width: auto;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+.status-cancelled {
+  color: var(--error);
+}
+
+.status-delivered {
+  color: var(--success-text);
+}
